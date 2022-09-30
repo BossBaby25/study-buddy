@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Subject from '../Subject/Subject';
 import UserInfo from '../UserInfo/UserInfo';
 
-const Activity = () => {
+const Activity = (props) => {
     const [subjects, setSubjects] = useState([]);
     const [exerciseTime, setExerciseTime] = useState(0);
     useEffect(() => {
@@ -31,7 +31,10 @@ const Activity = () => {
                 </div>
             </div>
             <div className="details-container col-4 ps-5">
-                <UserInfo exerciseTime={exerciseTime}></UserInfo>
+                <UserInfo 
+                exerciseTime={exerciseTime} 
+                notify={props.notify}
+                ></UserInfo>
             </div>
         </div>
     );

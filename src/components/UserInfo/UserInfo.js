@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-const UserInfo = ({exerciseTime}) => {
+const UserInfo = ({exerciseTime,notify}) => {
     const [breakTime,setbreakTime]=useState(0);
     if (localStorage.getItem("breakTime") === null) {
         localStorage.setItem("breakTime", breakTime);
@@ -37,6 +36,7 @@ const UserInfo = ({exerciseTime}) => {
             <h3>Exercise details: </h3>
             <p>Exercise Time: {exerciseTime} hr</p>
             <p>Break time: {localStorage.getItem("breakTime")}</p>
+            <button onClick={notify} className='btn btn-secondary'>Target Complete</button>
         </div>
     );
 };
