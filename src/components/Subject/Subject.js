@@ -10,7 +10,7 @@ const Subject = (props) => {
                 <img src={img} alt="" className='card-img-top' />
                 <div className="card-body">
                     <h5 className='card-title'>{name}</h5>
-                    <p className='card-text'>Target Duration: {time}hr</p>
+                    <p className='card-text'>Target Duration: {time} hr</p>
                     <button onClick={() =>props.handleClick(props.subject.time)} className='btn btn-secondary ps-5 pe-5'>Add to list</button>
                 </div>
             </div>

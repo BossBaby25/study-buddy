@@ -3,9 +3,10 @@ import Header from './components/Header/Header';
 import Activity from './components/Activity/Activity';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Question from './components/Question/Question';
 function App() {
   const notify = () => {
-    toast.success('🧘 Meditation Completed!', {
+    toast.success('Target Completed!', {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -20,6 +21,7 @@ function App() {
       <Header></Header>
       <ToastContainer />
       <Activity notify={notify}></Activity>
+      <Question></Question>
     </div>
   );
 }
