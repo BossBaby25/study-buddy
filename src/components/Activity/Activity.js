@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Subject from '../Subject/Subject';
+import UserInfo from '../UserInfo/UserInfo';
 
 const Activity = () => {
     const [subjects, setSubjects] = useState([]);
@@ -30,15 +31,7 @@ const Activity = () => {
                 </div>
             </div>
             <div className="details-container col-4 ps-5">
-                <h3>Add A Break</h3>
-                <button type="button" className="btn btn-secondary rounded-5 me-1">10min</button>
-                <button type="button" className="btn btn-secondary rounded-5 me-1">15min</button>
-                <button type="button" className="btn btn-secondary rounded-5 me-1">20min</button>
-                <button type="button" className="btn btn-secondary rounded-5 me-1">25min</button>
-                <button type="button" className="btn btn-secondary rounded-5 me-1">30min</button>
-                <h3>Exercise details: </h3>
-                <p>Exercise Time: {exerciseTime} hr</p>
-                <p>Break time: </p>
+                <UserInfo exerciseTime={exerciseTime}></UserInfo>
             </div>
         </div>
     );
